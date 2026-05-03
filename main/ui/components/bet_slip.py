@@ -9,11 +9,5 @@ class BetSlip(BaseComponent):
     stake_input = Input(locator=f'{locator}//*[@id="bet-slip-stake-input"]')
     place_bet_button = Button(locator=f'{locator}//*[@id="bet-slip-place-bet"]')
 
-
     def __init__(self) -> None:
         super().__init__(locator=self.locator)
-
-
-
-
-

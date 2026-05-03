@@ -18,13 +18,13 @@ class BasePage(ABC):
     def driver(self) -> Any:
         return DriverManager().driver
 
-    def open(self) -> 'BasePage':
+    def open(self) -> "BasePage":
         with allure.step(f"Open {self.__class__.__name__}"):
             self.logger.info(f"Open {self.__class__.__name__}")
             self.driver.get(url=self.url)
             return self
 
-    def wait_loaded(self, timeout: int = 5) -> 'BasePage':
+    def wait_loaded(self, timeout: int = 5) -> "BasePage":
         return self
 
     def is_loaded(self, timeout: int = 5) -> bool:

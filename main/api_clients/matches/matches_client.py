@@ -10,7 +10,7 @@ class MatchesClient(ApiClient):
     def get_all_matches(self) -> Response:
         url = self.service_url
         response = self.send_request(
-            method='GET',
+            method="GET",
             url=url,
         )
         return response

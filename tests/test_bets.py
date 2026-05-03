@@ -13,7 +13,7 @@ class TestBets:
     @allure.title("Test Put Bet over the users balance")
     @allure.description("This test attempts to place bet over the user budget")
     @allure.severity(allure.severity_level.CRITICAL)
-    @allure.tag('api')
+    @allure.tag("api")
     def test_put_bet_over_balance(self, reset_balance: None) -> None:
         matches_client = MatchesClient()
         bets_client = BetsClient()
@@ -26,25 +26,18 @@ class TestBets:
 
         with allure.step("Put bet to reduce user balance"):
             first_bet_response = bets_client.place_bet(
-                match_id=test_match.get("id"),
-                selection='HOME',
-                stake=100
+                match_id=test_match.get("id"), selection="HOME", stake=100
             )
             assert first_bet_response.status_code == 200, first_bet_response.json()
 
         with allure.step("Put bet with stake greater than users balance"):
             second_bet_response = bets_client.place_bet(
-                match_id=test_match.get("id"),
-                selection='HOME',
-                stake=100
+                match_id=test_match.get("id"), selection="HOME", stake=100
             )
 
             bets_client.verify_response(
                 actual_response=second_bet_response,
-                expected_response= ApiExpectedResponse(
-                    status_code=405,
-                    model=PlaceBetDto405
-                )
+                expected_response=ApiExpectedResponse(
+                    status_code=405, model=PlaceBetDto405
+                ),
             )
-
-

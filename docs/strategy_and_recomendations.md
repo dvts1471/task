@@ -12,5 +12,6 @@ Also they require a lot of maintenance and they are not stable enough to be auto
 
 ### Your top 2–3 recommendations if this project were to scale (CI/CD, additional test layers, data strategy, spec clarifications, etc)
 This framework can be integrated with CI/CD. Only environment variables should be set and all dependencies installed.
-Test data might be generated dynamically for API tests.
-It might be pretty useful to add some performance tests to the framework.
+I would also recommend to generate test data dynamically for API tests and implement data classes with default values to simplify test data creation.
+Also it might be pretty useful to add some performance tests to the framework.\
+Currently tests are designed to be executed in one thread. But they may be redesigned to be executed in parallel to speed up the execution time. 

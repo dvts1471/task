@@ -1,4 +1,3 @@
-
 from core.ui.pages import BasePage
 from main.ui.components.bet_slip import BetSlip
 from main.ui.components.filter_row import FilterRow
@@ -14,9 +13,7 @@ class DashboardPage(BasePage):
     bet_slip = BetSlip()
     successful_receipt_pop_up = SuccessfulReceiptPopUp()
 
-    def wait_loaded(self, timeout: int = 5) -> 'DashboardPage':
+    def wait_loaded(self, timeout: int = 5) -> "DashboardPage":
         self.header.wait_element(timeout=timeout)
         self.match_list.wait_element(timeout=timeout)
         return self
-
-

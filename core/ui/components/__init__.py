@@ -7,7 +7,6 @@ from core.utils.logger import Logger
 
 
 class BaseComponent(ABC, BaseElement):
-
     def __init__(self, locator: str) -> None:
         super().__init__(locator=locator)
         self.logger = Logger(self.__class__.__name__)

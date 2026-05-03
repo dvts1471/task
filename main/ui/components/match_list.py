@@ -17,18 +17,19 @@ class Match(BaseComponent):
         self.draw_odds_button = Button(locator='//button[contains(@id, "draw")]')
         self.away_odds_button = Button(locator='//button[contains(@id, "away")]')
 
+
 class MatchList(BaseComponent):
     locator = '//*[@class="matchList"]'
 
     def __init__(self) -> None:
         super().__init__(locator=self.locator)
 
-    def get_matches(self) -> List['Match']:
-        match_elements = self.driver.find_elements(By.XPATH, f'{self.locator}//*[@class="card matchCard"]')
+    def get_matches(self) -> List["Match"]:
+        match_elements = self.driver.find_elements(
+            By.XPATH, f'{self.locator}//*[@class="card matchCard"]'
+        )
         matches: List[Match] = []
         for element in match_elements:
-            match_id = element.get_attribute('id')
+            match_id = element.get_attribute("id")
             matches.append(Match(match_id=match_id))
         return matches
-
-

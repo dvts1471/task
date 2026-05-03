@@ -6,5 +6,3 @@ class Header(BaseComponent):
 
     def __init__(self) -> None:
         super().__init__(locator=self.locator)
-
-
