@@ -1,11 +1,4 @@
-# Test Plan for Single Bet Placement feature
-
-1. Match List
-2. Bet Slip
-3. Place Bet Interaction
-4. Success Receipt
-5. Error Modal
-6. Filters
+# Test Cases for Single Bet Placement feature
 
 ## Test cases:
 **ID:** TC1\
@@ -67,19 +60,20 @@
 **Risk Rationale:** Exact requirements defined for this field. The bet processing may break if the validations don't catch invalid value.\
 **Preconditions:** User is authenticated. User has positive balance greater than 100. The main page is opened.\
 
-| Num | Step                                                    | Expected result                                                                                                                               |
-|:----|:--------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| 1   | Click on any Odd button for any match in the Match List | The chosen match should reflect in Bet Slip block                                                                                             |
-| 2   | Fill "Stake" field with **5** (valid number)                | The "Place Bet" button should become enabled (clickable).                                                                                     |
-| 3   | Fill "Stake" field with **5.99**                        | The "Place Bet" button should become enabled (clickable).                                                                                     |
-| 4   | Fill "Stake" field with **5.999**                       | It should not be possible to add more than two decimal places                                                                                 |
-| 5   | Fill "Stake" field with **0.99**                        | The "Minimum stake is €1.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable)   |
-| 6   | Fill "Stake" field with **0**                           | The "Minimum stake is €1.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable)   |
-| 7   | Fill "Stake" field with **1**                               | The "Place Bet" button should become enabled (clickable).                                                                                     |
-| 8   | Fill "Stake" field with **100**                             | The "Place Bet" button should become enabled (clickable).                                                                                     |
-| 9   | Fill "Stake" field with **100.01**                          | The "Maximum stake is €100.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable) |
-| 10  | Fill "Stake" field with **some text**                       | It should not be possible to type text in the "Stake" field                                                                                   |
-| 11  | Fill "Stake" field with **-1**                              | It should not be possible to type negative numbers in the "Stake" field                                                                       |
+| Num | Step                                                      | Expected result                                                                                                                               |
+|:----|:----------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | Click on any Odd button for any match in the Match List   | The chosen match should reflect in Bet Slip block                                                                                             |
+| 2   | Fill "Stake" field with **5** (valid number)              | The "Place Bet" button should become enabled (clickable).                                                                                     |
+| 3   | Fill "Stake" field with **5.99**                          | The "Place Bet" button should become enabled (clickable).                                                                                     |
+| 4   | Fill "Stake" field with **5.999**                         | It should not be possible to add more than two decimal places                                                                                 |
+| 5   | Fill "Stake" field with **0.99**                          | The "Minimum stake is €1.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable)   |
+| 6   | Fill "Stake" field with **0**                             | The "Minimum stake is €1.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable)   |
+| 7   | Fill "Stake" field with **1**                             | The "Place Bet" button should become enabled (clickable).                                                                                     |
+| 8   | Fill "Stake" field with **100**                           | The "Place Bet" button should become enabled (clickable).                                                                                     |
+| 9   | Fill "Stake" field with **100.01**                        | The "Maximum stake is €100.00" error message should be shown under the "Stake" field. The "Place Bet" button should be disabled (unclickable) |
+| 10  | Fill "Stake" field with **some text**                     | It should not be possible to type text in the "Stake" field                                                                                   |
+| 11  | Fill "Stake" field with **-1**                            | It should not be possible to type negative numbers in the "Stake" field                                                                       |
+| 12  | Copy **0.99** to the buffer and paste it to "Stake" field | It should not be possible to type negative numbers in the "Stake" field                                                                       |
 
 ***
 

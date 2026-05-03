@@ -1,0 +1,9 @@
+allure-pytest
+pytest
+python-dotenv
+requests
+pydantic
+selenium
+ruff
+mypy
+webdriver-manager

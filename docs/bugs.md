@@ -1,4 +1,4 @@
-# Some of found bugs
+# Some found bugs
 
 ***
 **ID:** B1\
@@ -57,7 +57,7 @@
         }
     ```
 
-**Actual Result:** \
+**Actual Result:** 200 Status code. Bet placed successfully.\
 **Expected Result:** It should not be possible to put bet for finished event.\
 **Business Impact:** The betting to the finished matches may be abused by users as the event result is known. It may cause crucial loss of companies money\
 **Evidence:**
