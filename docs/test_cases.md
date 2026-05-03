@@ -32,7 +32,7 @@
 **Title:** Test upcoming matches only\
 **Priority:** Critical\
 **Risk Rationale:** Exact Requirement: Upcoming matches only. The betting to the finished matches may be abused by users as the event result is known.\
-**Preconditions:** User is authenticated. The main page is opened.
+**Preconditions:** User is authenticated. The main page is opened.\
 **Steps:**
 * Set "Date" filter to the time range in past and apply it
 * Choose any match from the "Match List" and click on any "Odds" button.

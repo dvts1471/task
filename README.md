@@ -5,7 +5,7 @@ A testing framework for validating application functionality, including API endp
 ***
 
 ## 🎯 Task files
-- [Test Cases](docs/test_cas.md)
+- [Test Cases](docs/test_cases.md)
 - [Bugs](docs/bugs.md)
 - [Strategy and Recommendations](docs/strategy_and_recomendations.md)
 
@@ -15,6 +15,15 @@ A testing framework for validating application functionality, including API endp
 - [Pydantic](https://pydantic.dev/) for data validation and modeling
 - [MyPy](https://mypy-lang.org/) for static type checking
 - [Ruff](https://pypi.org/project/ruff/) for code linting and formatting
+
+### 📊 Execution report
+[Allure Report](docs/allure-report.zip)
+
+To see the report, unzip the file and run `allure open` command. The report includes test execution results, logs, and screenshots for UI tests.
+```bash
+unzip docs/allure-report.zip -d docs/allure-report
+allure open docs/allure-report
+```
 ***
 
 ## 🚀 Setup and Installation
@@ -92,7 +101,7 @@ pytest -m e2e
 allure generate
 ```
 ```bash
-allure open test_results/allure-results
+allure open
 ```
 
 ***
